@@ -16,19 +16,19 @@ The Minimum Viable Product must be completed in three hours.
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your _Team Lead_ as collaborator on Github.
-- [ ] Clone your forked version of the Repository.
-- [ ] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `firstName-lastName`.
+- [x] Create a forked copy of this project.
+- [x] Add your _Team Lead_ as collaborator on Github.
+- [x] Clone your forked version of the Repository.
+- [x] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
+- [x] Implement the project on this Branch, committing changes regularly.
+- [x] Push commits: git push origin `firstName-lastName`.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge `firstName-lastName` Branch into master on **your fork, don't make Pull Requests against Lambda's repository**.
-- [ ] Please don't merge your own pull request.
-- [ ] Add your _Team Lead_ as a Reviewer on the Pull-request
-- [ ] Your _Team Lead_ will count the challenge as done by merging the branch into _master_.
+- [x] Submit a Pull-Request to merge `firstName-lastName` Branch into master on **your fork, don't make Pull Requests against Lambda's repository**.
+- [x] Please don't merge your own pull request.
+- [x] Add your _Team Lead_ as a Reviewer on the Pull-request
+- [x] Your _Team Lead_ will count the challenge as done by merging the branch into _master_.
 
 ## Commits
 
@@ -38,13 +38,14 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the difference between `Relational Databases` and `SQL`.
-
+- [x] Explain the difference between `Relational Databases` and `SQL`.
+      A relational database is a storage methodology that allows for the linking of data elements based on keys, in order to group related information. SQL is a query scripting language that allows you to maintain, access, and control data via written code.
 - [ ] Why do tables need a `primary key`?
-
+      primary keys ensure a unique data set, and allows for reference to specific data elements. primary keys track inserted records in a incremental fasion
 - [ ] What is the name given to a table column that references the primary key on another table.
-
+      forign key
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+      a many to many relationship is defined by a set of 3 or more tables. an initial table to hold records from a parent set of data, a table which contains tertiary information on a many to many basis, and finally a table that is used to join the many to many relationship. An example is many customers, can by many products, and the "sales order" table would conntect the entities.
 
 ## Minimum Viable Product
 
@@ -52,47 +53,46 @@ Take the steps necessary to complete the project from scratch. Start by initiali
 
 Complete the following tasks:
 
-- [ ] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
-  - [ ] a `project` can have multiple `tasks`.
-  - [ ] a `task` belongs to only one `project`.
-  - [ ] a `project` can use multiple `resources`. Example of `resources` are: computer, conference room, microphone, delivery van.
-  - [ ] the same `resource` can be used in multiple `projects`.
-  - [ ] when adding `projects` the client must provide a name, the description is optional.
-  - [ ] when adding `resources` the client must provide a name, the description is optional.
-  - [ ] when adding a `task` the client must provide a description, the notes are optional.
-  - [ ] when adding a `task` the client must provide the `id` of an existing project.
-  - [ ] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
-- [ ] Build an API with endpoints for:
-  - [ ] adding resources.
-  - [ ] retrieving a list of resources.
-  - [ ] adding projects.
-  - [ ] retrieving a list of projects.
-  - [ ] adding tasks.
-  - [ ] retrieving a list of tasks. **The list of tasks should include the project name and project description**.
+- [x] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules: -[X] a `project` can have multiple `tasks`.
+  - [x] a `task` belongs to only one `project`.
+  - [x] a `project` can use multiple `resources`. Example of `resources` are: computer, conference room, microphone, delivery van.
+  - [x] the same `resource` can be used in multiple `projects`.
+  - [x] when adding `projects` the client must provide a name, the description is optional.
+  - [x] when adding `resources` the client must provide a name, the description is optional.
+  - [x] when adding a `task` the client must provide a description, the notes are optional.
+  - [x] when adding a `task` the client must provide the `id` of an existing project.
+  - [x] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
+- [ X Build an API with endpoints for:
+  - [x] adding resources.
+  - [x] retrieving a list of resources.
+  - [x] adding projects.
+  - [x] retrieving a list of projects.
+  - [x] adding tasks.
+  - [x] retrieving a list of tasks. **The list of tasks should include the project name and project description**.
 
 ### Entities
 
 A `project` is what needs to be done. We want to store the following data about a `project`:
 
-- [ ] a unique ID.
-- [ ] a name. This column is required.
-- [ ] a description.
-- [ ] a boolean that indicates if the project has been completed. This column cannot be NULL, the default value should be `false`.
+- [x] a unique ID.
+- [x] a name. This column is required.
+- [x] a description.
+- [x] a boolean that indicates if the project has been completed. This column cannot be NULL, the default value should be `false`.
 
 A `resource` is anything needed to complete a project, some examples are: a person, a tool, a meeting room or a software license. We want to store the following data about a `resource`:
 
-- [ ] a unique ID.
-- [ ] a name. This column is required.
-- [ ] a description.
+- [x] a unique ID.
+- [x] a name. This column is required.
+- [x] a description.
 
 The database should not allow resources with duplicate names.
 
 A `task` one of the steps needed to complete the project. We want to store the following data about an `task`.
 
-- [ ] a unique ID.
-- [ ] a description of what needs to be done. This column is required.
-- [ ] a notes column to add additional information.
-- [ ] a boolean that indicates if the task has been completed. This column cannot be NULL, the default value should be `false`.
+- [x] a unique ID.
+- [x] a description of what needs to be done. This column is required.
+- [x] a notes column to add additional information.
+- [x] a boolean that indicates if the task has been completed. This column cannot be NULL, the default value should be `false`.
 
 ## Stretch Problem
 
